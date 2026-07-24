@@ -33,4 +33,12 @@ public class QuestionController {
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteQuestion(@PathVariable Integer id) {
+
+        String response = questionService.deleteQuestion(id);
+
+        return ResponseEntity.ok(response);
+    }
 }
