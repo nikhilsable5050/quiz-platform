@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Question {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "question_seq")
-    @SequenceGenerator(name = "question_seq", sequenceName = "question_sequence", allocationSize = 1,
-            initialValue = 11)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String questionTitle;
     private String option1;
