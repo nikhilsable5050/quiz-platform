@@ -1,4 +1,3 @@
-struture
 
 # Quiz Platform
 
